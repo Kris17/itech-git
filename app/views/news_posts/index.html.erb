@@ -1,0 +1,21 @@
+
+<div class="col-md-12">
+  <div class="news-big-block ">
+    <h3>News</h3>
+    <% @news.each do |news| %>
+        <div class="news">
+          <div class="news-img">
+            <%= image_tag news.picture.url if news.picture? %>
+          </div>
+          <div class="news-content">
+            <p class="news-title"><%= news.title %></p>
+            <p class="news-details"><i class="glyphicon glyphicon-calendar"></i><%= news.created_at %></p>
+            <p><%= news.content%></p>
+            <%= link_to 'Read more', news %>
+
+          </div>
+        </div>
+
+    <%end%>
+  </div>
+</div>

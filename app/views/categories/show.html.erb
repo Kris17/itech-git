@@ -1,0 +1,26 @@
+
+
+<div class="col-md-8">
+<% @posts.each do |post| %>
+    <div class="blog-post">
+      <div class="blog-image">
+        <%= image_tag post.picture.url if post.picture? %>
+
+      </div>
+      <div class="blog-details">
+        <p>
+          <i class="glyphicon glyphicon-calendar"></i><%= post.created_at %>,
+          <i class="glyphicon glyphicon-user"></i><%= post.user.name %>
+        </p>
+      </div>
+      <div class="blog-content">
+        <h3 class="blog-head"><%= post.category.name %></h3>
+        <p><%= post.content%> </p>
+      </div>
+    </div>
+
+<% end %>
+</div>
+<div class="col-md-4">
+<%= render 'categories/categories'%>
+    </div>

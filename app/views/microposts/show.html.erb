@@ -1,0 +1,29 @@
+
+
+
+<div class="col-md-12 page">
+  <div class="news-big-block ">
+    <div class="news">
+      <div class="news-img">
+        <%= image_tag @post.picture.url if @post.picture? %>
+      </div>
+      <div class="news-content">
+        <p class="news-title"><%= @post.category.name %></p>
+        <p class="news-details"><i class="glyphicon glyphicon-calendar"></i><%= @post.created_at %></p>
+        <p><%= @post.content %></p>
+
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <% if @post.post_comments.any? %>
+      <h3>Microposts (<%= @post.post_comments.count %>)</h3>
+      <ol class="microposts">
+        <%= @post.post_comments.find_each do |comment| %>
+            <p><%= comment.user.name %></p>
+            <p><%= comment.content %></p>
+        <%end%>
+      </ol>
+  <% end %>
+  <%= render 'shared/comment_form', micropost: @post %>
+</div>

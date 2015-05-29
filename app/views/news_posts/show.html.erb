@@ -1,0 +1,17 @@
+
+<div class="col-md-12 page">
+  <div class="news-big-block ">
+    <h3>News</h3>
+        <div class="news">
+          <div class="news-img">
+            <%= image_tag @news_post.picture.url if @news_post.picture? %>
+          </div>
+          <div class="news-content">
+            <p class="news-title"><%= @news_post.title %></p>
+            <p class="news-details"><i class="glyphicon glyphicon-calendar"></i><%= @news_post.created_at %></p>
+            <p><%= @news_post.content%></p>
+
+          </div>
+        </div>
+  </div>
+</div>

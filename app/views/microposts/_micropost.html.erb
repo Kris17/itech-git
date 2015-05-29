@@ -1,0 +1,24 @@
+
+<div class="blog-post">
+  <div class="blog-image">
+    <%= image_tag micropost.picture.url if micropost.picture? %>
+
+  </div>
+  <div class="blog-details">
+    <p>
+      <i class="glyphicon glyphicon-calendar"></i><%= micropost.created_at %>,
+      <i class="glyphicon glyphicon-user"></i><%= micropost.user.name %>
+    </p>
+  </div>
+  <div class="blog-content">
+    <h3 class="blog-head"><%= micropost.category.name %></h3>
+    <p><%=  micropost.content%> </p>
+    <%= link_to 'Read more', micropost %>
+    <br/>
+    <% if current_user?(micropost.user) %>
+        <%= link_to "delete", micropost, method: :delete,
+                    data: { confirm: "You sure?" },
+                    title: micropost.content %>
+    <% end %>
+  </div>
+</div>

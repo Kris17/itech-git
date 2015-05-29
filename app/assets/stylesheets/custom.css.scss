@@ -1,0 +1,252 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color:  #444;
+  font-size: 14px;
+  font-weight: 300;
+  height: 100%;
+  margin: 0px;
+  overflow-y: scroll !important;
+}
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+strong { font-weight: 700; }
+
+a, a:hover, a:focus {
+  color: #00aeef;
+  text-decoration: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Raleway', sans-serif;
+}
+h1, h2 {
+  margin-top: 10px;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 54px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+img { max-width: 100%; }
+
+::-moz-selection { background: #00aeef; color: #fff; text-shadow: none; }
+::selection { background: #00aeef; color: #fff; text-shadow: none; }
+
+section, .block {
+  display: block
+}
+.navbar-default {
+  background-color:#00aeef;
+  border-color: #00aeef;
+  box-shadow: 2px 1px 3px #000;
+}
+.navbar-default .navbar-nav > li > a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav li:hover {
+  background: #fff;
+  -webkit-transition: background 1300ms ease;
+  -moz-transition: background 1300ms ease;
+  -ms-transition: background 1300ms ease;
+  -o-transition: background 1300ms ease;
+  transition: background 1300ms ease;
+  a:hover {
+    color: #00aeef;
+  }
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a {
+  text-decoration: none;
+  color: #00aeef;
+  background-color: #FFFFFF;
+}
+.navbar-brand img {
+  width: 60px;
+  margin-top: -20px;
+}
+.navbar-default.categories  {
+  background-color: #eee;
+  border-color: #eee;
+  box-shadow: none;
+}
+.navbar-default.categories .navbar-nav > li > a {
+  color: #00AEEF;
+}
+.blog-post {
+  margin-top: 15px;
+}
+.blog-image {
+  float: left;
+  width: 100%;
+}
+.blog-image img {
+  float: left;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  height: auto;
+}
+.blog-details {
+  background-color:#00aeef;;
+  padding: 15px 20px 0px 20px;
+  border-radius: 0px 0px 5px 5px;
+  float: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.blog-details p {
+  color: #fff;
+}
+.blog-details p i {
+  margin-right: 10px;
+  font-size: 15px;
+}
+.blog-head {
+  margin-top: 20px;
+  color:#8947B8;
+  text-decoration: underline
+}
+.blog-content {
+  display: inline-block;
+  margin-top: 10px;
+}
+.news-title {
+  color:#8947B8;
+}
+.news-img {
+  width: 90px;
+  float: left;
+  margin-right: 5px;
+}
+.news-details {
+  font-size: 10px;
+  color: #ccc;
+}
+.news-content p {
+  margin: 0;
+}
+.news {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-top: 10px;
+}
+h3 {
+  color:#00aeef;
+}
+.recent-post  {
+  height: 82px;
+  overflow: hidden;
+}
+.news-big-block .news-img {
+  width: 300px;
+}
+.news-details {
+  font-size: 12px;
+  color: #ccc;
+}
+.news-content p {
+  margin-bottom: 10px;
+}
+.news-big-block .news-title {
+  font-size: 22px;
+}
+.footer {
+  padding: 10px 0;
+  background: #eee;
+}
+.categories ul {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #CFCFDA;
+    a {
+      font-size: 15px;
+      text-decoration: none;
+      color: #8947B8;
+    }
+  }
+}
+.wrapper {
+  margin-top:50px
+}
+.carousel-caption {
+  background: rgba(255,255,255,.8);
+  h3 {
+    font-size: 37px;
+  }
+  p {
+    color: #444;
+    font-size: 17px;
+  }
+}
+#map-canvas {
+  width: 100%;
+  height: 400px;
+}
+.page {
+  min-height: 600px;
+  margin-top:30px;
+}
+.users-list {
+  margin-top:20px;
+  img {
+    margin-right: 10px
+  }
+  a {
+    color: #8947B8;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .user-li {
+    border-top: 1px solid #CFCFDA;
+    padding: 10px 0;
+  }
+}
+.stats .follower {
+  color: #8947B8;
+  text-decoration: none;
+}
+.profile img, .user-info a, .update img {
+  float: left;
+  margin-right: 10px;
+}
+.user-info a {
+  display: block
+}
+select#micropost_category_id , .field textarea {
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.field textarea {
+  height: 120px;
+}
+form input[type=submit] {
+  background-color: #00AEEF;
+  margin-top:10px;
+  background-image: none;
+  border-color:  #00AEEF;
+}
+.news-big-block {
+  min-height: 300px;
+}
+label {
+  color: #00AEEF;
+}

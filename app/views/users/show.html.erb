@@ -1,0 +1,19 @@
+<% provide(:title, @user.name) %>
+<div class="row page">
+    <div class="col-md-3">
+      <h3>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h3>
+      <%= render 'shared/stats' %>
+    </div>
+
+  <div class="col-md-9">
+    <%= render 'follow_form' if signed_in? %>
+    <% if @user.microposts.any? %>
+      <h3>Posts (<%= @user.microposts.count %>)</h3>
+        <%= render @microposts %>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>
